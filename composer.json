@@ -1,0 +1,31 @@
+{
+  "name": "lower-speck/lower-speck-php-core",
+  "description": "A library and script for Lower Speck requirements management",
+  "license": "MIT",
+  "keywords": ["lower speck", "requirements management"],
+  "authors": [
+    {
+      "name": "Daniel Kuck-Alvarez",
+      "email": "dankuck@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "require-dev": {
+    "illuminate/support": "^5.5",
+    "php-mock/php-mock-mockery": "^1.1",
+    "phpunit/phpunit": "~5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "LowerSpeck\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "classmap": [
+      "tests/"
+    ]
+  },
+  "minimum-stability": "stable"
+}
