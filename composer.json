@@ -1,5 +1,5 @@
 {
-  "name": "lower-speck/lower-speck-php-core",
+  "name": "lower-speck/lower-speck-php",
   "description": "A library and script for Lower Speck requirements management",
   "license": "MIT",
   "keywords": ["lower speck", "requirements management"],
