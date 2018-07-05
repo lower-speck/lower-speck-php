@@ -1,2 +1,2 @@
-# laravel-lower-speck
-A Laravel command for Lower Speck requirements management
+# lower-speck-php
+A script and library for Lower Speck requirements management
