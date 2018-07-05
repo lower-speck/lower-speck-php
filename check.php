@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
+require './vendor/autoload.php';
 
 use LowerSpeck\Checker;
 use LowerSpeck\Reporter;
@@ -20,7 +20,7 @@ $id = $args->first(function ($arg) {
     return preg_match('/^\d+[\.a-z]*$/', $arg);
 });
 
-$checker = new Checker(__DIR__);
+$checker = new Checker('.');
 
 $reporter = new Reporter($checker->check($id), $verbosity);
 
