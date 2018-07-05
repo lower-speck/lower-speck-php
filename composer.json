@@ -10,10 +10,10 @@
     }
   ],
   "require": {
+    "illuminate/support": "^5.5",
     "php": ">=5.4.0"
   },
   "require-dev": {
-    "illuminate/support": "^5.5",
     "php-mock/php-mock-mockery": "^1.1",
     "phpunit/phpunit": "~5.7"
   },
