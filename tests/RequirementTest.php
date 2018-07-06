@@ -25,10 +25,13 @@ class RequirementTest extends TestCase
 
     public function testHasFlag()
     {
-        $requirement = new Requirement('2.a.a. (A,B) System MUST NOT catch fire.');
+        $requirement = new Requirement('2.a.a. (A,B) System MUST NOT (ever) catch fire.');
         $this->assertTrue($requirement->hasFlag('A'));
         $this->assertTrue($requirement->hasFlag('B'));
         $this->assertFalse($requirement->hasFlag('C'));
+
+        $requirement = new Requirement('2.a.a. System MUST NOT (ever) catch fire.');
+        $this->assertFalse($requirement->hasFlag('ever'));
     }
 
     /**
