@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
 
-require './vendor/autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 use LowerSpeck\Checker;
 use LowerSpeck\Reporter;
