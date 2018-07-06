@@ -19,8 +19,11 @@ class Requirement
 
         $next = trim($line);
 
+        // Regex: Split on any whitespace
         list($id, $next) = preg_split('/\s+/', $next, 2);
 
+        // Regex: Id must be 1 or more numeric characters, followed by any 
+        // number of alphabetic or dot characters, followed by exactly one dot
         if (preg_match('/^\d+[a-z\.]*\.$/i', $id)) {
             $this->id = $id;
         } else {
@@ -29,7 +32,9 @@ class Requirement
             return;
         }
 
-        if (preg_match('/^\((.*)\)/', $next, $flags)) {
+        // Regex: Matches parentheses with nothing or anything inside them
+        // unless what's inside them is a right-parenthesis.
+        if (preg_match('/^\(([^\)]*)\)/', $next, $flags)) {
             $this->flags = preg_split('/\s*,\s*/', $flags[1]);
             $next = trim(substr($next, strlen($flags[0])));
         } else {
