@@ -10,8 +10,8 @@
     }
   ],
   "require": {
-    "illuminate/support": "^5.5",
-    "php": ">=5.4.0"
+    "tightenco/collect": "^5.2.31",
+    "php": ">=7.0.0"
   },
   "require-dev": {
     "php-mock/php-mock-mockery": "^1.1",
