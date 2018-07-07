@@ -93,7 +93,7 @@ class Reporter
         }
 
         // remove trailing blank
-        if (!trim($table_data[count($table_data) - 1][1])) {
+        if (isset($table_data[count($table_data) - 1][1]) && !trim($table_data[count($table_data) - 1][1])) {
             array_pop($table_data);
         }
 

@@ -48,6 +48,12 @@ class ReferenceGrepper
             return $this->grep_interface;
         }
 
+        $win_style = `echo  LWR  1 | grep -P "\\bLWR\\s+\\d"`;
+        if (trim($win_style) == 'LWR  1') {
+            $this->grep_interface = 'WIN';
+            return $this->grep_interface;
+        }
+
         throw new \Exception('Could not detect grep version.');
     }
 
@@ -56,7 +62,7 @@ class ReferenceGrepper
         $interface = $this->detectGrepInterface();
         $query = escapeshellarg('\\bLWR\\s+\\d');
         $dir = escapeshellarg($path);
-        if ($interface == 'GNU') {
+        if ($interface == 'GNU' || $interface == 'WIN') {
             return "grep -P {$query} {$dir} -R";
         }
         if ($interface == 'BSD') {
